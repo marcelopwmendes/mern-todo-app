@@ -6,7 +6,7 @@ function Navbar() {
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link to="/" className="navbar-brand">MERN-Stack Todo App</Link>
 
-            <div className="collapse navbar-collapse">
+            <div className="collpse navbar-collapse">
                 <ul className="navbar-nav mr-auto">
 
                     <li className="navbar-item">
