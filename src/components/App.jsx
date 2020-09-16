@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Navbar from "./Navbar";
@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <div className="container">
-        <Navbar/>
+        <Navbar />
 
         <Route path="/" exact component={TodosList} />
         <Route path="/edit/:id" exact component={EditTodo} />

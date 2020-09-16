@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 function CreateTodo() {
 
@@ -19,9 +20,9 @@ function CreateTodo() {
         setPriority(e.target.value);
     }
 
-    function onChangeTodoCompleted(e) {
-        setCompleted(e.target.value);
-    }
+    // function onChangeTodoCompleted(e) {
+    //     setCompleted(e.target.value);
+    // }
 
     function onSubmit(e) {
         e.preventDefault();
@@ -31,6 +32,17 @@ function CreateTodo() {
         console.log(responsible);
         console.log(priority);
         console.log(completed);
+
+        const newTodo = {
+            description: description,
+            responsible: responsible,
+            priority: priority,
+            completed: completed
+        }
+
+        axios.post("http://localhost:4000/todos/add", newTodo)
+            .then(res => console.log(res.data));
+            
 
         setDescription("");
         setResponsible("");
