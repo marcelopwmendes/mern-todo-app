@@ -12,7 +12,6 @@ function App() {
     <Router>
       <div className="container">
         <Navbar />
-
         <Route path="/" exact component={TodosList} />
         <Route path="/edit/:id" exact component={EditTodo} />
         <Route path="/create" exact component={CreateTodo} />
